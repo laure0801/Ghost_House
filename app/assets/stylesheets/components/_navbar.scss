@@ -10,3 +10,11 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+li {
+  list-style-type: none;
+}
+
+li::marker {
+  display:none;
+}

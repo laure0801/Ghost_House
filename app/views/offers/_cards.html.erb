@@ -2,17 +2,22 @@
 <% @offers.each do | offer | %>
 <ul class="cards">
   <li>
-    <a href="" class="card">
-      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+  <%= link_to offer.title, offer_path(offer) class="card" %>
+      <% @offer.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, class="card" crop: :fill %>
+      <% end %>
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-          <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+          <% @user.photos.each do |user| %>
+          <%= cl_image_tag photo.key, class="card__thumb" crop: :fill %>
+          <% end %>
           <div class="card__header-text">
-            <h3 class="card__title">kim Cattrall</h3>
+            <h3 class="card__title"><%= @offer.title %></h3>
+            <span class="card__status"><%= @offer.disponibility %></span>
           </div>
         </div>
-        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        <p class="card__description"><%=@offer.description %></p>
       </div>
     </a>
   </li>

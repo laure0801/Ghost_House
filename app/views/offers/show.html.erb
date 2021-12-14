@@ -1,4 +1,27 @@
-<%= @offer.title %>
+<h1><%= @offer.title %></h1>
+<p>
+  <ul>
+    <li>
+      description : <%=@offer.description %>
+    </li>
+    <li>
+      price :<%= @offer.price %>
+    </li>
+    <li>
+      disponibility :<%= @offer.disponibility %>
+    </li>
+    <li>
+      <% @offer.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+    </li>
+    <li>
+    
+      <%= @offer.user.first_name %> <%=  @offer.user.last_name %>
+    </li>
+  </ul>
+</p>
+
 
 <%= link_to "Edit this offer", edit_offer_path(@offer) %>
 

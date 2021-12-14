@@ -1,0 +1,55 @@
+body {
+  background-color: #16161a;
+  
+}
+
+.simple_form.new_offer {
+  input {
+    color: #fffffe;
+  }
+}
+
+.form-container {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #fffffe;
+  padding: 6px;
+  border: 2px #7f5af0 solid;
+}
+
+  
+  h1 {
+    text-align: center;
+  }
+.form-actions {
+  display: flex;
+  justify-content: center;
+
+}
+  .btn-form {
+    background-color: #7f5af0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    width: 200px;
+    border: none;
+
+  }
+
+  .btn-form:hover {
+    background-color: #2cb67d;
+    }
+
+    .btn-back {
+      background-color: #7f5af0;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 15px;
+      padding: 5px;
+      width: 150px;
+    }
+
+    .btn-back:hover {
+      background-color: #2cb67d;
+      }

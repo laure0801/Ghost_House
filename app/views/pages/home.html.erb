@@ -1,38 +1,56 @@
-<%= render 'shared/navbar' %>
-
-<div class ="banner"> </div>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Hebergement", "#", class: "nav-link" %>
-      </li>
-    </ul>
-  </div>
-
-  <div><li class="nav-item dropdown">
-        <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %>
-        </div>
-      </li>
-    </div>
-</div>
+<div class ="banner"><div class="container">
+    <h1>Hello!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-primary" href="#">Apply now</a>
+    <a class="purple-btn" href="#">Apply now</a>
+  </div></div>
 
 <div class ="content">
-  <%= link_to "index", offers_path %>
+<div class ="card-container">
+<ul class="cards">
+  <li>
+    <a href="" class="card">
+      <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+          <div class="card__header-text">
+            <h3 class="card__title">Jessica Parker</h3>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="" class="card">
+      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+          <div class="card__header-text">
+            <h3 class="card__title">kim Cattrall</h3>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="" class="card">
+      <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+          <div class="card__header-text">
+            <h3 class="card__title">Jessica Parker</h3>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+      </div>
+    </a>
+  </li>
+</ul>
 </div>
-
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-  </div>
+  <%= link_to "index", offers_path %>
 </div>

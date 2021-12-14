@@ -1,10 +1,6 @@
+<%= render 'shared/navbar' %>
 <h1> All offers </h1>
-<% @offers.each do |offer| %>
-  <ul>
-    <%= link_to offer.title, offer_path(offer) %>
-    <%= offer.price %>
-  </ul>
-<% end %>
 
+<%= render 'cards' %>
 
-<%= link_to "Add an offer", new_offer_path %>
+<%= render 'shared/footer' %>

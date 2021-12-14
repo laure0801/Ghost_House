@@ -1,0 +1,10 @@
+<%= @offer.title %>
+
+<%= link_to "Edit this offer", edit_offer_path(@offer) %>
+
+<%= link_to "detete this offer", offer_path(@offer), method: :delete, class: "btn btn-cancel", data: { confirm: "Are you sure you want to delete this list?" } %>
+
+
+
+
+<%= link_to "Back to offers", offers_path %>

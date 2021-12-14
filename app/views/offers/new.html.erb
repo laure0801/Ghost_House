@@ -1,18 +1,5 @@
 <h1>New offer</h1>
 
-<%= simple_form_for(@offer) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<%= render "form", offer: @offer %>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :address %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :disponibility %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+<%= link_to "Back to offer", offers_path %>

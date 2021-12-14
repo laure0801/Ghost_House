@@ -32,10 +32,10 @@ class OffersController < ApplicationController
       render :new
     end
   end
-  
+
   def destroy
-  @offer.destroy
-  redirect_to offers_path
+    @offer.destroy
+    redirect_to offers_path
   end
 
   private

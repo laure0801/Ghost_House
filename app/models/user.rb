@@ -9,4 +9,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :offers
+  has_many :reservations
 end

@@ -1,14 +1,10 @@
 
-<h1> all our houses</h1>
-
 <div class ="card-container">
 <ul class="cards">
-<% @offers.each do | offer | %>
+<% @offers.first(limit).each do | offer | %>
   <li>
     <a href="" class="card">
-      <% offer.photos.each do |photo| %>
-      <%= image_tag "", crop: :fill, :class => "card__image" %>
-      <% end %>
+      <%= cl_image_tag offer.photos.first.key, crop: :fill, :class => "card__image" %>
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
@@ -18,8 +14,11 @@
         </div>
         <p class="card__description"><%= offer.description %></p>
       </div>
+      <div><%= link_to "details", offer_path(offer) %></div>
     </a>
   </li>
    <% end %>
 </ul>
 </div>
+
+<% console %>

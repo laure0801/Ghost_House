@@ -3,7 +3,8 @@
 <p>Details of your reservation:</p>
 
 <ul>
-  <li>Your host :</li>
+  <li>Your host : <%= @reservation.user.first_name  %> <%= @reservation.user.last_name %></li>
+  <li>Address : <%= @reservation.offer.address %></li>
   <li>Date of arrival : <%= @reservation.arrival%></li>
   <li>Date of departure : <%= @reservation.departure%></li>
 </ul>

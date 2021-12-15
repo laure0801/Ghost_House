@@ -1,7 +1,3 @@
-body {
-  background-color: #16161a;
-  
-}
 
 .simple_form.new_offer {
   input {
@@ -17,9 +13,11 @@ body {
   border: 2px #7f5af0 solid;
 }
 
-.form-container h1 {
-  text-align: center;
-}
+
+  h1 {
+    text-align: center;
+  }
+
 .form-actions {
   display: flex;
   justify-content: center;

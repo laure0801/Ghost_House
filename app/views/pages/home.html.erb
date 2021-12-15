@@ -1,10 +1,10 @@
 <div class ="banner"><div class="container">
-    <h1>Bonjour!</h1>
-    <p></p>
-    <%= link_to "index", offers_path, :class => "purple-btn" %>
-  </div>
-  </div>
+    <h1>  Welcome in Ghost House </h1>
+    <p> Discover all our haunted houses !</p>
+    <a class="purple-btn" href="#">discover our houses</a>
 
+    <%= link_to "index", offers_path, :class => "purple-btn" %>
+  </div></div>
 <div class ="content">
 <div class ="card-container">
 <ul class="cards">
@@ -52,5 +52,11 @@
   </li>
 </ul>
 </div>
-  <%= link_to "index", offers_path %>
+<div class="text-white">
+<p> Do you own a haunted house ? </p>
+</div>
+<div class="btn-purple-center">
+  <%= link_to "Rent your haunted house !", new_offer_path, :class => "purple-btn" %>
+  </div>
+  
 </div>

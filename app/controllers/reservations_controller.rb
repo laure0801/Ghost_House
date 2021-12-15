@@ -1,7 +1,7 @@
 class ReservationsController < ApplicationController
 
   def show
-    @reservations = Reservation.all
+    @reservation = Reservation.find(params[:id])
   end
 
   def new
@@ -24,6 +24,6 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:departure, :arrival)
+    params.require(:reservation).permit(:departure, :arrival, :user_id, :offer_id)
   end
 end

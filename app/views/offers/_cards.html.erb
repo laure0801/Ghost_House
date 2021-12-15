@@ -3,19 +3,18 @@
 <ul class="cards">
   <li>
       <% @offer.photos.each do |photo| %>
-        <%= cl_image_tag photo.keys[0], crop: :fill %>
+        <%= cl_image_tag photo.keys[0], crop: :fill, :class => "card"%>
       <% end %>
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
           <% @user.photos.each do |user| %>
-          <%= cl_image_tag photo.key, crop: :fill %>
+          <%= cl_image_tag photo.key, crop: :fill, :class => "card__thumb" %>
           <% end %>
           <div class="card__header-text">
             <h3 class="card__title"><%= @offer.title %></h3>
             <span class="card__status"><%= @offer.disponibility %></span>
           </div>
-        </div>
         <p class="card__description"><%=@offer.description %></p>
       </div>
     </a>

@@ -2,15 +2,14 @@
 <% @offers.each do | offer | %>
 <ul class="cards">
   <li>
-  <%= link_to offer.title, offer_path(offer) class="card" %>
       <% @offer.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, class="card" crop: :fill %>
+        <%= cl_image_tag photo.keys[0], crop: :fill %>
       <% end %>
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
           <% @user.photos.each do |user| %>
-          <%= cl_image_tag photo.key, class="card__thumb" crop: :fill %>
+          <%= cl_image_tag photo.key, crop: :fill %>
           <% end %>
           <div class="card__header-text">
             <h3 class="card__title"><%= @offer.title %></h3>

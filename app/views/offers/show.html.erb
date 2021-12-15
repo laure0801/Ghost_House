@@ -16,7 +16,7 @@
       <% end %>
     </li>
     <li>
-    
+
       <%= @offer.user.first_name %> <%=  @offer.user.last_name %>
     </li>
   </ul>
@@ -29,5 +29,5 @@
 
 
 
-
+<%= link_to "Reservation", new_offer_reservation_path(@offer) %>
 <%= link_to "Back to offers", offers_path %>

@@ -1,23 +1,25 @@
-<h1> Toutes nos maisons!</h1>
-<% @offers.each do | offer | %>
+
+<h1> all our houses</h1>
+
+<div class ="card-container">
 <ul class="cards">
+<% @offers.each do | offer | %>
   <li>
-      <% @offer.photos.each do |photo| %>
-        <%= cl_image_tag photo.keys[0], crop: :fill, :class => "card"%>
+    <a href="" class="card">
+      <% offer.photos.each do |photo| %>
+      <%= image_tag "", crop: :fill, :class => "card__image" %>
       <% end %>
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-          <% @user.photos.each do |user| %>
-          <%= cl_image_tag photo.key, crop: :fill, :class => "card__thumb" %>
-          <% end %>
           <div class="card__header-text">
-            <h3 class="card__title"><%= @offer.title %></h3>
-            <span class="card__status"><%= @offer.disponibility %></span>
+            <h3 class="card__title"><%= offer.title %></h3>
           </div>
-        <p class="card__description"><%=@offer.description %></p>
+        </div>
+        <p class="card__description"><%= offer.description %></p>
       </div>
     </a>
   </li>
+   <% end %>
 </ul>
-<% end %>
+</div>

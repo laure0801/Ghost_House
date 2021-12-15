@@ -1,5 +1,5 @@
 .purple-btn {
-  background-color: #914cea;
+  background-color: #7f5af0;
   border-style: solid;
   box-sizing: border-box;
   color: #FFFFFF;
@@ -25,6 +25,10 @@
 
 .purple-btn:hover,
 .purple-btn:focus {
-  background-color: #F082AC;
+  background-color: #2cb67d;
   text-decoration: none;
+}
+
+.btn-purple-center {
+  text-align: center;
 }

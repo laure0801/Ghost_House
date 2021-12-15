@@ -17,10 +17,9 @@ body {
   border: 2px #7f5af0 solid;
 }
 
-  
-  h1 {
-    text-align: center;
-  }
+.form-container h1 {
+  text-align: center;
+}
 .form-actions {
   display: flex;
   justify-content: center;
@@ -28,7 +27,8 @@ body {
 }
   .btn-form {
     background-color: #7f5af0;
-    border-radius: 10px;
+    border-style: solid;
+    box-sizing: border-box;
     text-align: center;
     font-size: 15px;
     padding: 5px;

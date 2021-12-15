@@ -3,7 +3,7 @@
 <ul class="cards">
 <% @offers.first(limit).each do | offer | %>
   <li>
-    <a href="" class="card">
+  <%= link_to offer_path(offer), :class => "card" do %>
       <%= cl_image_tag offer.photos.first.key, crop: :fill, :class => "card__image" %>
       <div class="card__overlay">
         <div class="card__header">
@@ -14,10 +14,8 @@
         </div>
         <p class="card__description"><%= offer.description %></p>
       </div>
-    </a>
+    <% end %>
   </li>
-   <% end %>
+<% end %>
 </ul>
 </div>
-
-<% console %>

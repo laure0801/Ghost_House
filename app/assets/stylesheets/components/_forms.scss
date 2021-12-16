@@ -34,9 +34,13 @@
 }
 
 .form-inputs .form-group label {
-  color: #fffffe;
+  color: black;
 }
 
 .whitetext {
   color: white;
+}
+
+.whitetext .form-group label {
+color: white !important;
 }

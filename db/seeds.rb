@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
+User.destroy_all
+Offer.destroy_all
 puts "bonjour"
-# User.destroy_all
-User.create(first_name: "Jean", last_name: "Jacques", email:"jeanjacques@email.com", rating: 5, password: 123456)
-User.create(first_name: "Jean", last_name: "Michel", email:"michmich@email.com", rating: 4, password: 123456)
 
+User.create(first_name: "Jean", last_name: "Michel", email:"michmich@email.com", rating: 4, password: 123456)
 
 puts "creating"
 
@@ -21,10 +21,10 @@ file3 = URI.open("https://cdn.pixabay.com/photo/2021/09/14/14/04/castle-6624100_
 offer = Offer.create(user_id: 1, title: "Haunted mansion", description: "ça fait peur woulah", price: 50, address: "25 bouevard des champignons, 68422 Paris", disponibility: DateTime.new(2024/10/23))
 offer.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
-offer2 = Offer.create(user_id: 2, title: "Haunted ", description: "ça fait peur ", price: 50, address: "25 bouevard des champignons, 68422 Metez", disponibility: DateTime.new(2024/10/23))
+offer2 = Offer.create(user_id: 1, title: "Haunted ", description: "ça fait peur ", price: 50, address: "25 bouevard des champignons, 68422 Metez", disponibility: DateTime.new(2024/10/23))
 offer2.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
 
-offer3 = Offer.create(user_id: 3, title: "Haunted hoclqjbv", description: "lohnzlbne", price: 50, address: "25 bouevard des cimetieres, 68422 Paris", disponibility: DateTime.new(2024/10/23))
+offer3 = Offer.create(user_id: 1, title: "Haunted hoclqjbv", description: "lohnzlbne", price: 50, address: "25 bouevard des cimetieres, 68422 Paris", disponibility: DateTime.new(2024/10/23))
 offer3.photos.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
 
 puts "finit"

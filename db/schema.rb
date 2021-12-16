@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_145105) do
     t.date "departure"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
     t.index ["offer_id"], name: "index_reservations_on_offer_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end

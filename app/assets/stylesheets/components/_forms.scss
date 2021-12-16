@@ -28,31 +28,15 @@
   justify-content: center;
 
 }
-  // .btn-form {
-  //   background-color: #7f5af0;
-  //   border-style: solid;
-  //   box-sizing: border-box;
-  //   text-align: center;
-  //   font-size: 15px;
-  //   padding: 5px;
-  //   width: 200px;
-  //   border: none;
 
-  // }
+.form-inputs blacktext {
+  color: black;
+}
 
-  // .btn-form:hover {
-  //   background-color: #2cb67d;
-  //   }
+.form-inputs .form-group label {
+  color: #fffffe;
+}
 
-    // .btn-back {
-    //   background-color: #7f5af0;
-    //   border-radius: 10px;
-    //   text-align: center;
-    //   font-size: 15px;
-    //   padding: 5px;
-    //   width: 150px;
-    // }
-
-    // .btn-back:hover {
-    //   background-color: #2cb67d;
-    //   }
+.whitetext {
+  color: white;
+}

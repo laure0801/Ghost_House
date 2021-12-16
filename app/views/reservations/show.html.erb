@@ -3,8 +3,11 @@
 <p>Details of your reservation:</p>
 
 <ul>
-  <li>Your host : <%= @reservation.user.first_name  %> <%= @reservation.user.last_name %></li>
+  <li>Your host : <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></li>
   <li>Address : <%= @reservation.offer.address %></li>
   <li>Date of arrival : <%= @reservation.arrival%></li>
   <li>Date of departure : <%= @reservation.departure%></li>
+  <li>Status : <%= @reservation.status %></li>
 </ul>
+
+  <td><%= link_to 'Destroy', @reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

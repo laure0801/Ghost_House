@@ -1,13 +1,26 @@
-<h1>Congratulations on your booking! Your reservation is validated</h1>
+<div class="text-white p"><h1>Congratulations on your booking! Your reservation is validated</h1></div>
 
-<p>Details of your reservation:</p>
+<div class='container'>
+  <div class="card-trip">
+      <%= cl_image_tag(@reservation.offer.photos.first.key) %>
+    <div class="card-trip-infos">
+      <div>
+        <h2>Details of your reservation:</h2>
+    
+        <p>Your host : <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></p>
+        <p>Address : <%= @reservation.offer.address %></p>
+        <p>Date of arrival : <%= @reservation.arrival%></p>
+        <p>Date of departure : <%= @reservation.departure%></p>
+        <p>Status : <%= @reservation.status %></p>
+      </div>
+      <h2 class="card-trip-pricing"> <%= @reservation.offer.price  %> £</h2>
+       <%= image_tag "avatar.png", class: "card-trip-user avatar-bordered", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    </div>
+  </div>
 
-<ul>
-  <li>Your host : <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></li>
-  <li>Address : <%= @reservation.offer.address %></li>
-  <li>Date of arrival : <%= @reservation.arrival%></li>
-  <li>Date of departure : <%= @reservation.departure%></li>
-  <li>Status : <%= @reservation.status %></li>
-</ul>
+</div>
 
-  <td><%= link_to 'Destroy', @reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <div class="container-btns">
+    <td><%= link_to 'Destroy', @reservation, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"purple-btn" %></td>
+    <td><%= link_to 'Back', offers_path, :class=>"purple-btn" %></td>
+  </div>

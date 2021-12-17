@@ -21,6 +21,26 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def accept
+    @reservation = Reservation.find(params[:id])
+    @reservation.status = 'Accepted'
+    if @reservation.save
+      redirect_to profile_path
+    else
+      render 'profile'
+    end
+  end
+
+  def decline
+    @reservation = Reservation.find(params[:id])
+    @reservation.status = 'Declined'
+    if @reservation.save
+      redirect_to profile_path
+    else
+      render 'profile'
+    end
+  end
+
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy

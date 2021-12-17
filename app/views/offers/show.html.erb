@@ -1,9 +1,9 @@
 <div class ="container">
-<div class="card-trip">
+<div class="card-trip-details">
     <% @offer.photos.each do |photo| %>
   <%= cl_image_tag photo.key, crop: :fill %>
   <% end %>
-  <div class="card-trip-infos">
+  <div class="card-trip-infos-details">
     <div class="details">
         <h1><%= @offer.title %></h1>
         <p>Host : <%= @offer.user.first_name %> <%= @offer.user.last_name %></p>

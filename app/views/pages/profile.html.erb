@@ -12,8 +12,7 @@
           <%= link_to 'Decline', decline_reservation_path(reservation), method: :patch, data: {confirm: 'Are you sure?'}, class: "btn btn-danger " if reservation.status != 'Declined'%>
         </li>
       <% end %>
-    
-      <h1>Here are the requests you made</h1>
+
     </div>
     <div class="user_reservations">
     <h1>Here are the requests you made</h1>
@@ -31,4 +30,3 @@
     </div>
   </div>
 </div>
-

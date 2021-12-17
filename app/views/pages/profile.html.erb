@@ -1,34 +1,29 @@
-<div class="white-text-profile">
-  <div class="profile">
-    <div class="pending_reservations">
+<div class="profile_container">
+<div class="profile">
+  <div class="pending_reservations">
       <h1>Accept or decline those bookings</h1>
       <p><%= "No reservations pending" if @reservation_demands.empty? %></p>
       <% @reservation_demands.each do |reservation| %>
-        <li>
-          <span>Booking for <%= reservation.offer.title %></span>
-          <span>From <%= reservation.arrival %> to <%= reservation.departure %></span>
-          <span>Status: <%= reservation.status %></span>
-          <%= link_to 'Accept', accept_reservation_path(reservation), method: :patch, data: {confirm: 'Are you sure?'}, class: "btn btn-primary" if reservation.status != 'Accepted'%>
-          <%= link_to 'Decline', decline_reservation_path(reservation), method: :patch, data: {confirm: 'Are you sure?'}, class: "btn btn-danger " if reservation.status != 'Declined'%>
-        </li>
+          <span><strong>Booking for </strong> <%= reservation.offer.title %></span><br>
+          <span><strong>From</strong> <%= reservation.arrival %> <strong>to</strong> <%= reservation.departure %></span><br>
+          <span><strong>Status: </strong> <%= reservation.status %></span><br><br>
+          <div class="btns">
+          <%= link_to 'Accept', accept_reservation_path(reservation), method: :patch, data: {confirm: 'Are you sure?'}, class: "purple-btn" if reservation.status != 'Accepted'%>
+          <%= link_to 'Decline', decline_reservation_path(reservation), method: :patch, data: {confirm: 'Are you sure?'}, class: "red-btn " if reservation.status != 'Declined'%><br><br>
+          </div>
       <% end %>
-    
-      <h1>Here are the requests you made</h1>
     </div>
-    <div class="user_reservations">
+
+  <div class="user_reservations">
     <h1>Here are the requests you made</h1>
       <p><%= "You haven’t made any requests yet" if @reservation_requests.empty?%></p>
-      <p><%= link_to 'Discover our offers', offers_path, class: "btn btn-primary" if @reservation_requests.empty?%></p>
+      <p><%= link_to 'Discover our offers', offers_path, class: "purple-btn" if @reservation_requests.empty?%></p>
       <% @reservation_requests.each do |reservation| %>
-        <li>
-          <span>Booking for <%= reservation.offer.title %></span>
-          <span>From <%= reservation.arrival %> to <%= reservation.departure %></span>
-          <span>Status: <%= reservation.status %></span>
-          <%= link_to 'Cancel', reservation_path(reservation), method: :delete, data: {confirm: 'Are you sure?'}, class: "red-btn" %>
-        </li>
-        </div>
+          <span><strong>Booking for </strong> <%= reservation.offer.title %></span><br>
+          <span><strong>From</strong> <%= reservation.arrival %><strong> to </strong><%= reservation.departure %></span><br>
+          <span><strong>Status:</strong> <%= reservation.status %></span><br>
+          <%= link_to 'Cancel', reservation_path(reservation), method: :delete, data: {confirm: 'Are you sure?'}, class: "red-btn" %><br><br>
       <% end %>
-    </div>
   </div>
 </div>
-
+</div>

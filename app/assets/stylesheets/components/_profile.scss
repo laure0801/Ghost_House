@@ -1,0 +1,68 @@
+
+.profile_container {
+ width: 900px;
+ margin: 0 auto;
+
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pending_reservations {
+  position: relative;
+  display: block;
+  height: 100%;
+  background-color: #ffffff;
+  // border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+  color : #000000;
+}
+
+
+.pending_reservations h1 {
+  color : #000000;
+  margin: 30px
+}
+
+.pending_reservations p {
+  margin: 30px;
+}
+
+.pending_reservations span {
+  margin: 30px
+}
+
+.btns {
+  text-align: right;
+  margin: 0 10px;
+}
+
+.user_reservations {
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.user_reservations h1 {
+  color : #000000;
+  margin: 30px
+}
+
+.user_reservations p {
+  margin: 30px
+}
+
+.user_reservations span {
+  margin: 30px
+}
+
+.user_reservations .red-btn {
+  float:right;
+  margin: 15px;
+}

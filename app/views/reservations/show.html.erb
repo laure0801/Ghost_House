@@ -6,7 +6,7 @@
     <div class="card-trip-infos">
       <div>
         <h2>Details of your reservation:</h2>
-    
+
         <p>Your host : <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></p>
         <p>Address : <%= @reservation.offer.address %></p>
         <p>Date of arrival : <%= @reservation.arrival%></p>
@@ -24,7 +24,6 @@
 
   <div class="container-btns">
     <td><%= link_to 'Destroy', @reservation, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"red-btn" %></td>
-    <td><%= link_to 'Delete', @reservation, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"purple-btn" %></td>
     <td><%= link_to 'Back', offers_path, :class=>"purple-btn" %></td>
   </div>
 

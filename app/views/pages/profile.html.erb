@@ -1,3 +1,4 @@
+      <div class="white-text-profile">
       <h1>Accept or decline those bookings</h1>
       <p><%= "No reservations pending" if @reservation_demands.empty? %></p>
       <% @reservation_demands.each do |reservation| %>
@@ -9,7 +10,7 @@
           <%= link_to 'Decline', decline_reservation_path(reservation), method: :patch, data: {confirm: 'Are you sure?'}, class: "btn btn-danger " if reservation.status != 'Declined'%>
         </li>
       <% end %>
-    </div>
+    
       <h1>Here are the requests you made</h1>
       <p><%= "You haven’t made any requests yet" if @reservation_requests.empty?%></p>
       <p><%= link_to 'Discover our offers', offers_path, class: "btn btn-primary" if @reservation_requests.empty?%></p>
@@ -18,7 +19,11 @@
           <span>Booking for <%= reservation.offer.title %></span>
           <span>From <%= reservation.arrival %> to <%= reservation.departure %></span>
           <span>Status: <%= reservation.status %></span>
-          <%= link_to 'Cancel', reservation_path(reservation), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+          <%= link_to 'Cancel', reservation_path(reservation), method: :delete, data: {confirm: 'Are you sure?'}, class: "red-btn" %>
         </li>
+        </div>
       <% end %>
     </div>
+
+
+    

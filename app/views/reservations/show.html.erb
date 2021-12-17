@@ -13,14 +13,18 @@
         <p>Date of departure : <%= @reservation.departure%></p>
         <p>Status : <%= @reservation.status %></p>
       </div>
-      <h2 class="card-trip-pricing"> <%= @reservation.offer.price  %> £</h2>
+      <div class="card-trip-pricing">
+      <h2 > <%= @reservation.offer.price  %> £</h2>
+      </div>
        <%= image_tag "avatar.png", class: "card-trip-user avatar-bordered", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
     </div>
   </div>
+  </div>
 
-</div>
 
   <div class="container-btns">
-    <td><%= link_to 'Destroy', @reservation, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"purple-btn" %></td>
+    <td><%= link_to 'Destroy', @reservation, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"red-btn" %></td>
     <td><%= link_to 'Back', offers_path, :class=>"purple-btn" %></td>
   </div>
+
+</div>

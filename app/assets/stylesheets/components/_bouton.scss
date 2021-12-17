@@ -35,6 +35,38 @@
 
 .container-btns {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 16px;
   
+}
+
+.red-btn {
+  background-color: black ;
+  border-style: solid;
+  box-sizing: border-box;
+  color: #FFFFFF !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.red-btn:hover {
+  background-color:#CD1818;
+  color: white;
+  text-decoration: none;
 }

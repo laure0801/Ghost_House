@@ -6,6 +6,8 @@
   <div class="card-trip-infos">
     <div class="details">
         <h1><%= @offer.title %></h1>
+        <p>Host : <%= @offer.user.first_name %> <%= @offer.user.last_name %></p>
+        <p>Address : <%= @offer.address %></p>
         <p><%=@offer.description %></p>
     </div>
     <div class="links">

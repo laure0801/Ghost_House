@@ -8,8 +8,8 @@
           <span>Booking for <%= reservation.offer.title %></span>
           <span>From <%= reservation.arrival %> to <%= reservation.departure %></span>
           <span>Status: <%= reservation.status %></span>
-          <%= link_to 'Accept', accept_reservation_path(reservation), method: :patch, data: {confirm: 'Are you sure?'}, class: "btn btn-primary" if reservation.status != 'Accepted'%>
-          <%= link_to 'Decline', decline_reservation_path(reservation), method: :patch, data: {confirm: 'Are you sure?'}, class: "btn btn-danger " if reservation.status != 'Declined'%>
+          <%= link_to 'Accept', accept_reservation_path(reservation), method: :patch, data: {confirm: 'Are you sure?'}, class: "btn btn-success" if reservation.status != 'Accepted'%>
+          <%= link_to 'Decline', decline_reservation_path(reservation), method: :patch, data: {confirm: 'Are you sure?'}, class: "btn btn-warning " if reservation.status != 'Declined'%>
         </li>
       <% end %>
     

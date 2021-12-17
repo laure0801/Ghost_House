@@ -15,11 +15,11 @@
   </div>
 
   <div class="searchbar">
-    <%= form_tag offers_path, method: :get, :class=>"searchbar" do %>
+    <%= form_tag offers_path, :class => "d-flex", smethod: :get do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Find haunted house"
+        placeholder: "Find a haunted house"
       %>
       <%= submit_tag "Search", class: "purple-btn" %>
     <% end %>

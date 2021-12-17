@@ -17,7 +17,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 50px;
+  margin: 20px;
   padding: 0;
   list-style-type: none;
 }
@@ -169,4 +169,17 @@ h3.card__title {
   right: 16px;
   top: -35px;
   width: 80px;
+}
+
+.card-container h1 {
+  padding: 25px;
+
+}
+
+.card-trip-pricing {
+  padding: 70px;
+}
+
+.card-trip-pricing h2 {
+  font-size: 40px;
 }

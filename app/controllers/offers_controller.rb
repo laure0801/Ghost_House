@@ -1,7 +1,14 @@
 class OffersController < ApplicationController
   before_action :set_offers, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @offers = Offer.all
+    @markers = @offers.geocoded.map do |offer|
+      {
+        lat: offer.latitude,
+        lng: offer.longitude
+      }
+    end
   end
 
   def show

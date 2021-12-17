@@ -5,10 +5,6 @@
 
 }
 
-.details {
-  top: 0px
-}
-
 .card-trip {
   overflow: hidden;
   background: white;
@@ -49,7 +45,11 @@
   top: -20px;
   width: 40px;
 }
- */
+
+.details {
+  top: 0px
+}
+
 .links
 {
   width: 300px;
@@ -65,5 +65,4 @@
 .map {
   width: 900px;
   background-color: #FFFFFF;
-
 }

@@ -1,5 +1,5 @@
 <div class="form-container">
-<h1>New offer</h1>
+<h1>Your House : </h1>
 <%= simple_form_for(@offer) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -17,6 +17,5 @@
 
     <%= f.submit "Submit", :class => "purple-btn"%>
   </div>
-
 </div>
 <% end %>

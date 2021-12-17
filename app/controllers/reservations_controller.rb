@@ -14,6 +14,7 @@ class ReservationsController < ApplicationController
     @offer = Offer.find(params[:offer_id])
     @reservation.offer = @offer
     @reservation.user = current_user
+    @reservation.status = 'Pending'
     if @reservation.save
       redirect_to reservation_path(@reservation)
     else

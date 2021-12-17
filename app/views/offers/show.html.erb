@@ -1,11 +1,13 @@
 <div class ="container">
-<div class="card-trip">
+<div class="card-trip-details">
     <% @offer.photos.each do |photo| %>
   <%= cl_image_tag photo.key, crop: :fill %>
   <% end %>
-  <div class="card-trip-infos">
+  <div class="card-trip-infos-details">
     <div class="details">
         <h1><%= @offer.title %></h1>
+        <p>Host : <%= @offer.user.first_name %> <%= @offer.user.last_name %></p>
+        <p>Address : <%= @offer.address %></p>
         <p><%=@offer.description %></p>
     </div>
     <div class="links">
@@ -19,8 +21,9 @@
       <%= link_to "Back to offers", offers_path, class: "purple-btn  btn-lg btn-block"%>
     </div>
   </div>
-  <div class="map">
-
-  </div>
+<div id="map"
+     style="width: 100%; height: 300px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
 </div>

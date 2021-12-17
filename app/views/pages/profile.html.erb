@@ -1,4 +1,6 @@
-      <div class="white-text-profile">
+<div class="white-text-profile">
+  <div class="profile">
+    <div class="pending_reservations">
       <h1>Accept or decline those bookings</h1>
       <p><%= "No reservations pending" if @reservation_demands.empty? %></p>
       <% @reservation_demands.each do |reservation| %>
@@ -12,6 +14,9 @@
       <% end %>
     
       <h1>Here are the requests you made</h1>
+    </div>
+    <div class="user_reservations">
+    <h1>Here are the requests you made</h1>
       <p><%= "You haven’t made any requests yet" if @reservation_requests.empty?%></p>
       <p><%= link_to 'Discover our offers', offers_path, class: "btn btn-primary" if @reservation_requests.empty?%></p>
       <% @reservation_requests.each do |reservation| %>
@@ -24,6 +29,6 @@
         </div>
       <% end %>
     </div>
+  </div>
+</div>
 
-
-    

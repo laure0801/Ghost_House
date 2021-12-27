@@ -1,9 +1,10 @@
 class OffersController < ApplicationController
   before_action :set_offers, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    if params['query'].present?
-      @offers = Offer.search_by_title_and_address(params['query'])
+    if params[:query].present?
+      @offers = Offer.search_by_title_and_address(params[:query])
     else
       @offers = Offer.all
     end
